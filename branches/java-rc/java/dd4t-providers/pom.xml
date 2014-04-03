@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>org.dynamicdelivery</groupId>
+		<artifactId>dd4t-parent</artifactId>
+		<version>1.31</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.dynamicdelivery</groupId>
+	<artifactId>dd4t-providers</artifactId>
+	<packaging>jar</packaging>
+
+	<name>Dynamic Delivery for Tridion Providers Module</name>
+
+	<dependencies>
+		<!-- filesystem resource class -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- StorageException -->
+		<dependency>
+			<groupId>com.tridion.contentdelivery</groupId>
+			<artifactId>cd_core</artifactId>
+			<version>${tridion.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- StorageManagerFactory & DAO -->
+		<dependency>
+			<groupId>com.tridion.contentdelivery</groupId>
+			<artifactId>cd_datalayer</artifactId>
+			<version>${tridion.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- cache agent & item meta -->
+		<dependency>
+			<groupId>com.tridion.contentdelivery</groupId>
+			<artifactId>cd_model</artifactId>
+			<version>${tridion.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- cache agent -->
+		<dependency>
+			<groupId>com.tridion.contentdelivery</groupId>
+			<artifactId>cd_cache</artifactId>
+			<version>${tridion.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- link resolving -->
+		<dependency>
+			<groupId>com.tridion.contentdelivery</groupId>
+			<artifactId>cd_linking</artifactId>
+			<version>${tridion.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- dcp resolving -->
+		<dependency>
+			<groupId>com.tridion.contentdelivery</groupId>
+			<artifactId>cd_broker</artifactId>
+			<version>${tridion.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- dd4t api contains interfaces we implement -->
+		<dependency>
+			<groupId>org.dynamicdelivery</groupId>
+			<artifactId>dd4t-api</artifactId>
+			<version>${version}</version>
+		</dependency>
+
+		<!-- logging api -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.4</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- no compiling with without these two, they are referenced from Tridion 
+			jars -->
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>1.0</version>
+			<scope>provided</scope>
+		</dependency>		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.4.0.GA</version>
+			<scope>provided</scope>
+		</dependency>		
+	</dependencies>
+</project>
