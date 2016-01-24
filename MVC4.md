@@ -1,0 +1,1 @@
+DD4T is now also available for ASP.Net MVC 4. Just download [this dll](http://code.google.com/p/dynamic-delivery-4-tridion/downloads/detail?name=DD4T.Mvc.dll) and use it instead of the DD4T.Mvc.dll that is delivered with the DD4T project template.
